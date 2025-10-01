@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Margin="10" Spacing="15">
+
+            <Label
+                Text="Przelicz walute USD"
+                FontSize="24"
+                TextColor="Black"
+             />
+
+            <Entry 
+                x:Name="value"
+                Placeholder="Podaj wartość w USD"
+                Keyboard="Numeric"
+                MaximumWidthRequest="250"
+                HorizontalOptions="Start"
+             />
+
+            <HorizontalStackLayout>
+                <RadioButton x:Name="idr" Content="IDR" GroupName="CurrencyGroup" />
+                <Label Text="Kurs:" VerticalTextAlignment="Center"/>
+                <Entry x:Name="idrRate" Text="16000" WidthRequest="100" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <RadioButton x:Name="pln" Content="PLN" GroupName="CurrencyGroup" />
+                <Label Text="Kurs:" VerticalTextAlignment="Center"/>
+                <Entry x:Name="plnRate" Text="3,7" WidthRequest="100" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <RadioButton x:Name="czk" Content="CZK" GroupName="CurrencyGroup" />
+                <Label Text="Kurs:" VerticalTextAlignment="Center"/>
+                <Entry x:Name="czkRate" Text="20,6" WidthRequest="100" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+
+
+            <Button
+                Text="Przelicz"
+                Clicked="Convert"
+             />
+
+            <Label 
+                x:Name="result"
+                FontSize="24"
+                TextColor="Black"
+                HorizontalOptions="Start"
+             />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
